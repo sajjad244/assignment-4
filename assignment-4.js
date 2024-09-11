@@ -1,4 +1,4 @@
-//!!!! Problem-01 : Tax Calculator  !!!!
+//!!!! Problem-01 -
 
 function calculateTax(income, expenses) {
   if (income < 0 || expenses < 0 || income < expenses) {
@@ -11,7 +11,7 @@ function calculateTax(income, expenses) {
   return tax;
 }
 
-//!!!! Problem-02 : Tax Calculator  !!!!
+//!!!! Problem-02 -
 
 function sendNotification(email) {
   if (email.indexOf("@") === -1) {
@@ -27,4 +27,19 @@ function sendNotification(email) {
   return notification;
 }
 
-//!!!! Problem-03 : Tax Calculator  !!!!
+//!!!! Problem-03 -
+
+function checkDigitsInName(name) {
+  if (typeof name !== "string") {
+    return "Invalid Input";
+  }
+  const checkNames = name.split(" ");
+
+  for (let checkName of checkNames) {
+    if (!isNaN(checkName)) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(checkDigitsInName("Name2024"));
