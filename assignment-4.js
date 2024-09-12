@@ -42,4 +42,29 @@ function checkDigitsInName(name) {
   }
   return false;
 }
-console.log(checkDigitsInName("Name2024"));
+
+//!!!! Problem-04 -
+
+function calculateFinalScore(obj) {
+  if (typeof obj !== "object") {
+    return "Invalid Input";
+  }
+
+  if (
+    typeof obj.name !== "string" ||
+    typeof obj.testScore !== "number" ||
+    typeof obj.schoolGrade !== "number" ||
+    typeof obj.isFFamily !== "boolean"
+  ) {
+    return "Invalid Input";
+  }
+
+  let total_marks = obj.testScore + obj.schoolGrade;
+
+  if (obj.isFFamily) {
+    total_marks = total_marks + total_marks * 0.2;
+  }
+  return total_marks >= 80;
+}
+
+//!!!! Problem-05 -
